@@ -44,3 +44,5 @@ Route::get('/logout', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('auth/redirect', 'Auth\SocialController@redirect');
+Route::get('auth/callback', 'Auth\SocialController@callback');

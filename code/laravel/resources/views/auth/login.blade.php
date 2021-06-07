@@ -41,6 +41,12 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
+                                <div class="g-recaptcha" data-sitekey="6Lc-DxkbAAAAAG_c2XxqJuOdTaWSjC1R9o-DvPvX"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -62,6 +68,13 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="{{ url('/auth/redirect') }}" class="btn btn-primary"><i class="fa fa-google"></i> Google</a>
                             </div>
                         </div>
                     </form>

@@ -123,6 +123,16 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'providers' => [
+        // Other service providers…
+        Laravel\Socialite\SocialiteServiceProvider::class,
+    ],
+   
+    'aliases' => [
+        // Other aliases…
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
